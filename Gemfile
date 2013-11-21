@@ -41,3 +41,25 @@ gem 'jbuilder', '~> 1.2'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'pg'
+gem 'therubyracer', :platform=>:ruby
+
+group :development do
+  gem 'hub', :require=>nil
+  gem 'rails_layout'
+end
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+group :production do
+  gem 'thin'
+end
+
+group :test do
+  gem 'database_cleaner', '1.0.1'
+  gem 'email_spec'
+end
+
